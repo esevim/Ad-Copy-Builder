@@ -7,8 +7,8 @@ def to_excel(df, Sheet_Name):
     df.to_excel(writer, index=False, sheet_name=Sheet_Name)
     workbook = writer.book
     worksheet = writer.sheets[Sheet_Name]
-    format1 = workbook.add_format({'num_format': '0.00'}) 
-    worksheet.set_column('A:A', None, format1)  
+#    format1 = workbook.add_format({'num_format': '0.00'}) 
+#    worksheet.set_column('A:A', None, format1)  
     writer.save()
     processed_data = output.getvalue()
     return processed_data
